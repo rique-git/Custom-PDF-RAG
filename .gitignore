@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+data/raw/*
+data/processed/*
+data/qdrant_db/*
+*.sqlite
+*.lock
