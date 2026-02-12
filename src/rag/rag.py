@@ -9,7 +9,7 @@ def ask(query: str):
     if not parents:
         return "I do not have information in the indexed documents to answer that."
 
-    context = "\n\n".join(p["page_content"] for p in parents)
+    context = "\n\n".join(p["page_content"] + "\nSource:" + p["metadata"]["source"] for p in parents)
 
     prompt = f"""
             You are a assistant answering questions strictly using the provided context.
@@ -25,7 +25,7 @@ def ask(query: str):
             {context}
 
             Question:
-            {query}
+            {query} 
             """
 
     llm = get_llm()
