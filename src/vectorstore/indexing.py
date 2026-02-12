@@ -54,7 +54,7 @@ def index_documents():
             Document(
                 page_content=chunk,
                 metadata={
-                    "source": str(md_file.with_suffix(".pdf"))  # keep it honest
+                    "source": str(md_file.stem) + ".pdf"
                 }
             )
             for chunk in parent_texts
