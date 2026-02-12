@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path
 import hashlib
 
-from src.main import build_pipeline
+from src.pipeline import build_pipeline
 from src.rag.rag import ask
 from src.config import PDFS_DIR
 
