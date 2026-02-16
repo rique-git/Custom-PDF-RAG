@@ -1,0 +1,12 @@
+streamlit
+pymupdf
+pymupdf4llm
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+langchain-ollama
+langchain
+langchain-qdrant
+qdrant-client
+ollama
+sentence-transformers

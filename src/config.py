@@ -10,3 +10,5 @@ QDRANT_PATH = BASE_DIR / "vectorstore"
 
 CHILD_COLLECTION = "child_chunks"
 PARENT_COLLECTION = "parent_chunks"
+
+OLLAMA_BASE_URL = "http://localhost:11434"

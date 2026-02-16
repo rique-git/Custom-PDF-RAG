@@ -5,9 +5,20 @@ from langchain_qdrant import QdrantVectorStore
 from ..config import QDRANT_PATH, CHILD_COLLECTION
 from .embeddings import get_dense_embeddings
 
+import os
 
 def get_client():
-    return QdrantClient(path=str(QDRANT_PATH))
+    host = os.getenv("QDRANT_HOST")
+    port = os.getenv("QDRANT_PORT")
+    path = os.getenv("QDRANT_PATH")
+
+    if host and port:
+        return QdrantClient(host=host, port=int(port))
+
+    if path:
+        return QdrantClient(path=path)
+
+    return QdrantClient(host="localhost", port=6333)
 
 
 def recreate_collection():

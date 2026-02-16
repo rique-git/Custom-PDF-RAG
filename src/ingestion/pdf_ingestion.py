@@ -2,7 +2,6 @@ import glob
 from pathlib import Path
 import pymupdf
 import pymupdf4llm
-import re
 
 from ..config import MARKDOWN_DIR, PDFS_DIR
 
