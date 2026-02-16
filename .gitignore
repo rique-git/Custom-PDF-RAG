@@ -10,3 +10,5 @@ data/processed/*
 data/qdrant_db/*
 *.sqlite
 *.lock
+
+meta.json
