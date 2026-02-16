@@ -102,7 +102,7 @@ or
 make docker-run
 ```
 
-### 2. Run the Streamlit app
+### 2. Pull model inside Docker container
 
 ```bash
 make pull-model-docker
