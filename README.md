@@ -90,6 +90,8 @@ make run
 
 ## Docker Usage
 
+⚠️ Performance Note: Docker deployment may be 20-50% slower than running Python locally, especially on Windows/Mac, due to virtualization overhead and I/O operations. This is normal and expected. For maximum performance during development, consider running locally.
+
 ### 1. Build and Run
 
 ```bash
