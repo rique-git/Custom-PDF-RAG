@@ -4,8 +4,24 @@ import hashlib
 
 from src.pipeline import build_pipeline
 from src.rag.rag import ask
-from src.config import PDFS_DIR
+from src.config import PDFS_DIR,MARKDOWN_DIR, PARENT_STORE_PATH, QDRANT_PATH
 
+
+# --------------------------------------------------
+# ENSURE DIRECTORIES EXIST
+# --------------------------------------------------
+
+def ensure_directories():
+    directories = [
+        PDFS_DIR,
+        MARKDOWN_DIR,
+        PARENT_STORE_PATH,
+        QDRANT_PATH,
+    ]
+    for directory in directories:
+        directory.mkdir(parents=True, exist_ok=True)
+
+ensure_directories()
 
 # --------------------------------------------------
 # PDF STATE TRACKING (content-based hash)
